@@ -1,44 +1,36 @@
 # aerodynamics-cfd-harpoon-analysis
 Computational fluid dynamics (CFD) study of an external-store geometry under compressible/incompressible viscous flow assumptions (Aerodynamics-II final report).
 # Aerodynamics CFD – Harpoon External Store Analysis
+# AGM-84 Harpoon Aerodynamic Flow Analysis (CFD) — Aerodynamics II Final
 
-This repository contains a Computational Fluid Dynamics (CFD) study of an external-store (AGM-84 Harpoon–like) geometry conducted as part of the **Aerodynamics II** final project.
+This repository contains my **Aerodynamics-II final assignment** on the CFD investigation of the **AGM-84 Harpoon** missile’s external aerodynamics under **viscous compressible / incompressible** flow assumptions.
 
-The study investigates the aerodynamic characteristics of the external-store configuration under both **compressible and incompressible viscous flow assumptions**.
+## Objective
+- Investigate the turbulent flow field around the missile geometry
+- Evaluate **pressure distribution** and aerodynamic performance indicators such as:
+  - **Drag / Lift**
+  - **Aerodynamic coefficients (CL, CD, etc.)**
+- Support the discussion with a clear CFD methodology (domain, BCs, model choice)
 
----
-
-## Project Scope
-
-- External-store (missile-like) geometry modeling
-- Steady-state viscous flow analysis
-- Compressible vs. incompressible flow comparison
-- Aerodynamic force and flow-field evaluation
-- Academic CFD methodology and reporting
-
----
-
-## Methods & Tools
-
-- Geometry preparation and preprocessing
-- CFD setup (boundary conditions, mesh considerations)
-- Numerical analysis of viscous flow behavior
-- Post-processing and result interpretation
-
----
+## Methodology (high-level)
+- **Solver/Tool:** ANSYS **Fluent** (external flow / enclosure domain)
+- **Turbulence modeling:** RANS approach (the report lists multiple turbulence models and explains the selected one in detail)
+- **Control volume / domain (enclosure):**
+  - Rectangular box enclosure created around the missile
+  - Upstream distance extended more in the **negative X direction** (report uses a non-uniform domain)
+  - Far-field boundaries are set as **symmetry** (not “wall”) to mimic free-stream conditions
+- **Deliverables in the report:**
+  - Turbulence model equations + constants/variables
+  - Control-volume sketch + boundary conditions table
+  - Step-by-step CFD workflow and assumptions
 
 ## Files
+- **Full report (PDF):** `docs/agm84-harpoon-cfd-report.pdf`
 
-- `docs/agm84-harpoon-cfd-report.pdf`  
-  **Full CFD analysis report (PDF)** including methodology, assumptions, results, and discussion.
+## Notes (portfolio / privacy)
+This report includes a cover page with personal/course identifiers.  
+If you plan to keep the repository **Public**, consider uploading a **redacted PDF** (cover page removed) for privacy.
 
 ---
-
-## Notes
-
-This project demonstrates hands-on experience in:
-- Applied aerodynamics
-- CFD-based engineering analysis
-- Technical reporting for aerospace applications
-
-The repository is intended for academic and portfolio purposes.
+**Course:** Aerodynamics-II (Final Assignment)  
+**Topic:** AGM-84 Harpoon CFD / viscous compressible–incompressible flow analysis
